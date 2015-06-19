@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+@model IEnumerable<movies_Planet.Models.Movy>
+<div style="background-color: yellow;  padding-left: 370px; padding-top: 4px; padding-bottom: 2px">
+    <h4 style="font-size: 35px"> Click On movie you want to Delete! </h4>
+</div>
+<br />
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Movie</th>
+            <th>Type</th>
+            <th>Director</th>
+            <th>timing</th>
+            <th>Release Date</th>
+            <th>Genre</th>
+            <th>Synopsis</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+
+
+
+        @foreach (var x in Model)
+        {
+            {
+                <tr>
+                    <td><a href="~/Admin/SaveDelete/@x.Id">@x.Name</a></td>
+                    <td>@x.Type</td>
+                    <td>@x.Driector</td>
+                    <td>@x.Timing</td>
+                    <td>@x.ReleaseDate</td>
+                    <td>@x.Genre</td>
+                    <td>@x.Synopsis</td>
+                    
+
+                </tr>
+            }
+
+        }
+    </tbody>
+</table>

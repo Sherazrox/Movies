@@ -1,0 +1,190 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    @*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-1.11.1.min.js"></script>*@
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</head>
+    <body>
+        
+        @model IEnumerable<movies_Planet.Models.Movy>
+
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-12">
+                
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+
+                            <div class="item active">
+                                <a href="~/Home/Movies"><img src="~/Content/Images/a.jpg" alt="Chania" style="width:100%; height:300px"></a>
+                                <div class="carousel-caption">
+                                    
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <a href="~/Home/Movies"><img src="~/Content/Images/b.jpg" alt="Chania" style="width:100%; height:300px"></a>
+                                <div class="carousel-caption">
+                                   
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <a href="~/Home/Movies"><img src="~/Content/Images/c.jpg" alt="Chania" style="width:100%; height:300px"></a>
+                                <div class="carousel-caption">
+                                    
+                                </div>
+                            </div>
+
+                            <div class="item">
+                                <a href="~/Home/Movies"><img src="~/Content/Images/d.jpg" alt="Chania" style="width:100%; height:300px"></a>
+                                <div class="carousel-caption">
+                                </div>
+                            </div>
+                            
+                           
+                        </div>
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    
+                    <br/>
+                    <div class="col-md-7">
+                        <div style="background-color: yellow; padding-left: 15px; padding-top: 4px; padding-bottom: 2px">
+                            <h4>Upcoming Movies</h4> 
+                        </div>
+                        <br/>
+                        <br />
+                            <!-- 2nd Slider -->
+                        <div style="background-color: dodgerblue; padding-left: 15px; padding-top: 4px; padding-bottom: 2px">
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                            @*    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol> *@
+
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+
+                                    <div class="item active">
+                                        <a href="~/Home/UpcomingMovies"><img src="~/Upcoming/a.jpg" alt="Chania" style="width:160px; height:250px"></a>
+                                        <div class="carousel-caption">
+                                            <h3 style="">The Vatican Tapes</h3>
+                                            <p>A horror movie about a person who hates her wife</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <a href="~/Home/UpcomingMovies"><img src="~/Upcoming/b.jpg" alt="Chania" style="width:160px; height:250px"></a>
+                                        <div class="carousel-caption">
+                                            <h3>Paper Towns</h3>
+                                            <p>Romantic story about two beautiful hearts.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <a href="~/Home/UpcomingMovies"><img src="~/Upcoming/c.jpg" alt="Chania" style="width:160px; height:250px"></a>
+                                        <div class="carousel-caption">
+                                            <h3>Minnions</h3>
+                                            <p>The most awaited movie of the year , still making his viewers to wait</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="item">
+                                        <a href="~/Home/UpcomingMovies"><img src="~/Upcoming/d.jpg" alt="Chania" style="width:160px; height:250px"></a>
+                                        <div class="carousel-caption">
+                                            <h3>Mission Impossible</h3>
+                                            <p>Tom cruise is back with all his action moves</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                </div>
+
+                                @* <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>*@
+                            </div>
+
+                        </div>
+                    
+                    <div class="col-md-5">
+                        <div style="background-color: red; padding-left: 15px; padding-top: 4px; padding-bottom: 2px">
+                            <h4>Today's Movie Schedule</h4>
+                        </div>
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Movie</th>
+                                    <th>Type</th>
+                                    <th>timing</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               
+                            
+                              
+
+                                @foreach (var x in Model)
+                                {
+                                    { 
+                                        <tr>
+                                            <td><a href="~/Home/Detail/@x.Id">@x.Name</a></td>
+                                            <td>@x.Type</td>
+                                            <td>@x.Timing</td>
+                                        
+                                        </tr>
+                                    }
+                                   
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    
+
+                </div>
+            
+            
+            
+            </div>      @*End of Row class*@
+                
+        </div>
+
+    </body>
+</html>

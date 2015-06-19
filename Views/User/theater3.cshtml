@@ -1,0 +1,57 @@
+﻿<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+    @model IEnumerable<movies_Planet.Models.Theater3>
+    <div style="background-color: dodgerblue;  padding-left: 420px; padding-top: 4px; padding-bottom: 2px">
+        <h4 style="font-size: 30px;">Available Seats in Theater 3 are :</h4>
+    </div>
+    <div class="row">
+
+
+        <div class="col-md-12">
+
+
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Seat No.</th>
+                        <th>Row No.</th>
+                        <th>Charges</th>
+                        <th>Seat Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+
+
+
+                    @foreach (var x in Model)
+                    {
+                        {
+                            <tr>
+                                <td><a href="~/User/Confirm3/@x.Id">@x.SeatNo</a></td>
+                                <td>@x.RowNo</td>
+                                <td>@x.Charges</td>
+                                <td>@x.SeatStatus</td>
+
+                            </tr>
+                        }
+
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</body>
+</html>
+

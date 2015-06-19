@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        
+        <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+        <script src="~/Scripts/jquery.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+        <link rel="~/bootstrap" />
+        <script src="~/"></script>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/slider")
+        @Scripts.Render("~/bundles/gallery")
+        <link href="~/Content/jquery.bxslider.css" rel="stylesheet" />
+        <style>
+            #linkAddImage {
+                background: none repeat scroll 0 0 green;
+                border-radius: 9px;
+                color: white;
+                padding: 4px 7px;
+            }
+        </style>
+    </head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://localhost:13234/">Movies Planet <span class="sr-only">(current)</span></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li style="font-size: 15px"><a href="~/Home/movies">Movies </a></li>
+                    <li style="font-size: 15px"><a href="~/Home/UpcomingMovies"> Upcoming Movies </a></li>
+                    @*<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Catagories <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>*@
+                </ul>
+                
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="http://localhost:13234/Admin">Admin Login</a></li>
+                    <li><a href="http://localhost:13234/User">User Login</a></li>
+                    <li >
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+   
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+    <br/>
+    <br/>
+    <br/>
+    <br />
+    <br />
+    <br />
+
+    <a href="~/Home/UpcomingMovies"><img style="padding-left: 120px;padding-right: 60px; height: 180px; width: 500px" src="~/Images/coming.jpg" /></a>
+    <a href="~/User/Index"><img style="padding-right: 60px; height: 180px; width: 390px" src="~/Images/buy.jpg" /></a>
+    <a href="~/User/Register"><img style="padding-right: 60px; height: 180px; width: 390px" src="~/Images/get.jpg" /></a>
+
+</body>
+</html>

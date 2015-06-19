@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<h2></h2>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 style="padding-left: 190px">Welcome to User Login</h1>
+    </div>
+    <div class="row">
+
+
+        @using (Html.BeginForm("check", "User", FormMethod.Post, null))
+        {
+            <div class="form-group">
+                <label style="font-size: 25px; padding-left: 510px" for=" usr">User Name</label>
+                <div style="padding-right: 300px; padding-left: 300px">
+                    <input type="text" class="form-control" id="name" name="name" required="required">
+                </div>
+            </div>
+            <div class="form-group">
+                <label style="font-size: 25px; padding-left: 517px" for="pwd">Password</label>
+                <div style="padding-right: 300px; padding-left: 300px">
+                    <input type="password" class="form-control" id="pwd" name="pwd" required="required">
+                </div>
+                <br />
+            </div>
+            <div class="form-group">
+                <div style="padding-left: 520px">
+                    <button style="font-size: 25px" type="submit" class="btn btn-default">Submit</button>
+                    </div>
+            </div>
+    <div style="padding-left: 430px">
+        <a href="http://localhost:13234/user/register"> <h3 style="font-size: 25px" class="btn btn-default">New User? Sign Up here</h3> </a>
+    </div>
+        }
+
+
+
+    </div>
+
+</div>
+<br/><br /><br /><br />

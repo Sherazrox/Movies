@@ -1,0 +1,32 @@
+﻿
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    @*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <script src="~/Scripts/jquery-1.11.1.min.js"></script>*@
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    @model IEnumerable<movies_Planet.Models.Movy>
+
+    <div class="container">
+
+        <div style="background-color: dodgerblue;  padding-left: 450px; padding-top: 4px; padding-bottom: 2px">
+            <h4 style="font-size: 30px;"> Welcome Sir! </h4>
+        </div>
+        <br/><br /><br /><br />
+
+        <div style=" padding-left: 220px">
+            <a href="http://localhost:13234/Home/movies"><button class="btn btn-primary"> Watch the movies bieng Played in cinema now </button> </a>
+            <a href="http://localhost:13234/Home/UpcomingMovies"><button class="btn btn-primary"> Watch upcoming Movies</button> </a>
+            <a href="http://localhost:13234/User/tickets"><button class="btn btn-primary"> Book tickets Online</button> </a>
+            </div>
+
+        </div>
+</body>
+</html>

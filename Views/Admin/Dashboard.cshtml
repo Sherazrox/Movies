@@ -1,0 +1,78 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    @*<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <script src="~/Scripts/jquery-1.11.1.min.js"></script>*@
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+    @model IEnumerable<movies_Planet.Models.Movy>
+    
+    <div class="container">
+        
+        <div style=" padding-left: 270px">
+            <a href="~/admin/addItem"><button style="font-size: 30px" class="btn btn-default"> Add new Movie</button> </a>  
+            <a href="~/admin/addUpcoming"><button style="font-size: 30px  ; padding-left: 40px" class="btn btn-default"> Add new Upcoming Movie</button> </a> 
+            <br/> 
+            <a href="~/admin/Delete"><button style="font-size: 30px  ; padding-left: 42px" class="btn btn-default"> Delete Movie</button> </a>
+            <a href="~/admin/DeleteUpcoming"><button style="font-size: 30px ; padding-left: 30px"  class="btn btn-default"> Delete an Upcoming Movie</button> </a>
+            <br />  
+            <a href="~/admin/updatemovie"><button style="font-size: 30px  ; padding-left: 32px" class="btn btn-default"> Update Movie</button> </a>
+            <a href="~/admin/updateUpmovie"><button style="font-size: 30px  ; padding-left: 20px" class="btn btn-default"> Update an Upcoming Movie</button> </a>
+
+            <br />
+            <a href="~/admin/reset"><button style="font-size: 43px  ; padding-left: 32px" class="btn btn-default">Make seats available in theater</button> </a>
+
+        </div>
+        <br/><br />
+        <div style="background-color: dodgerblue;  padding-left: 420px; padding-top: 4px; padding-bottom: 2px">
+            <h4 style="font-size: 30px;">Available Movies are </h4>
+        </div>
+            <div class="row">
+            
+
+            <div class="col-md-12">
+
+
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Movie</th>
+                            <th>Type</th>
+                            <th>timing</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+
+
+                        @foreach (var x in Model)
+                        {
+                            {
+                                <tr>
+                                    <td><a href="~/Home/Detail/@x.Id">@x.Name</a></td>
+                                    <td>@x.Type</td>
+                                    <td>@x.Timing</td>
+
+                                </tr>
+                            }
+
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "addUpcoming";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+<div style="background-color: dodgerblue;  padding-left: 300px; padding-top: 4px; padding-bottom: 2px">
+    <h4 style="font-size: 35px">Give the Data of Upcoming Movie you want to Add</h4>
+</div>
+<br />
+<form action="/Admin/saveUpcoming" method="post" enctype="multipart/form-data">
+    <div style="padding-right: 400px ; padding-left: 400px">
+
+
+
+        <div class="form-group">
+            <label for="name">Movie Name</label>
+            <input type="text" class="form-control" id="mName" name="mName" required="required">
+        </div>
+
+        <div class="form-group">
+            <label for="director">Director</label>
+            <input type="text" class="form-control" id="Director" name="Director" required="required">
+        </div>
+
+        <div class="form-group">
+            <label for="type">Type</label>
+            <input type="text" class="form-control" id="Type" name="Type" required="required">
+        </div>
+
+       
+        <div class="form-group">
+            <label for="cast">Cast</label>
+            <input type="text" class="form-control" id="Cast" name="Cast" required="required">
+        </div>
+
+        <label for="genre">Genre:</label>
+        <select class="form-control" id="genre" name="genre" @*style="width:300px;height:auto"*@>
+            <option value="">--Select--</option>
+            <option value="Movie">Action</option>
+            <option value="Drama">Romantic</option>
+            <option value="TeleFilm">Horror</option>
+            <option value="TeleFilm">Animated</option>
+            <option value="TeleFilm">Racing</option>
+
+        </select>
+
+        <div class="form-group">
+            <label for="language">Language</label>
+            <input type="text" class="form-control" id="language" name="language" required="required">
+        </div>
+
+        <div class="form-group">
+            <label for="date">Release Date</label>
+            <input type="text" class="form-control" id="RelaseDate" name="RelaseDate" required="required">
+        </div>
+
+
+        <div class="form-group">
+            <label for="synopsis">Synopsis</label>
+            <input type="text" class="form-control" id="synopsis" name="synopsis" required="required">
+        </div>
+
+        Select Image:<br />
+        <input type="file" name="file" id="file" required="required" style="width: 100%;" />
+        <br />
+        <button type="submit" class="btn btn-primary">Add item</button>
+    </div>
+</form>
+<br /><br /><br />
+
+
+
+

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+    @model IEnumerable<movies_Planet.Models.Movy>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div style="background-color: yellow; padding-left: 400px; padding-top: 4px; padding-bottom: 2px">
+                    <h4 style="font-size: 30px">Movies In Cinema Right Now</h4>
+                </div>
+                <br />
+                <table>
+                    <tr>
+                        <td>
+                            @foreach (var x in Model)
+                            {
+                               <a href="~/Home/Detail/@x.Id"> <img style="height: 290px; width: 220px ; padding-right: 35px ; padding-bottom: 15px" src="~/Images/@x.ImgURL" /> </a>
+                               
+
+                            }
+                        </td>
+                       
+                    </tr>
+                    <tr>
+                        <td>
+                            
+                            <br />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
